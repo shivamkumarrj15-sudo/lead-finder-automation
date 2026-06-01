@@ -1,0 +1,17 @@
+{
+  "name": "lead-finder-automation",
+  "version": "1.0.0",
+  "description": "Automated business lead generation using Apify Google Maps scraper, Google Sheets, and Gmail notifications",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "apify-client": "^2.9.2",
+    "dotenv": "^16.4.5",
+    "googleapis": "^140.0.0",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^6.9.13"
+  }
+}
