@@ -95,6 +95,7 @@ async function executeLeadGeneration() {
 
     finalLeads.forEach((lead, index) => {
       const name = lead.title || 'N/A';
+      const category = lead.categoryName || 'N/A';
       const rating = lead.totalScore || 'N/A';
       const reviews = lead.reviewsCount || 0;
       const phone = lead.phone || 'Contact not listed';
@@ -103,6 +104,7 @@ async function executeLeadGeneration() {
       const mapUrl = lead.url || 'No Google Maps link';
 
       telegramText += `*${index + 1}. ${name}*\n`;
+      telegramText += `💼 *Business:* ${category}\n`;
       telegramText += `⭐ *Rating:* ${rating} (${reviews} reviews)\n`;
       telegramText += `📞 *Phone:* \`${phone}\`\n`;
       telegramText += `📧 *Email:* \`${email}\`\n`;
