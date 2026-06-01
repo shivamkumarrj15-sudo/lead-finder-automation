@@ -2,9 +2,9 @@ name: Daily Lead Generation
 
 on:
   schedule:
-    # 7:00 PM IST is 1:30 PM UTC (13:30 UTC)
+    # 10:00 PM IST is 4:30 PM UTC (16:30 UTC)
     # Cron format: 'Minute Hour DayOfMonth Month DayOfWeek'
-    - cron: '30 13 * * *'
+    - cron: '30 16 * * *'
   workflow_dispatch: # Allows you to manually click "Run workflow" in GitHub UI at any time
 
 jobs:

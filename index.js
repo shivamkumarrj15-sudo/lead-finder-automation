@@ -130,15 +130,15 @@ const args = process.argv.slice(2);
 const isCronMode = args.includes('--cron');
 
 if (isCronMode) {
-  // Cron schedule for 7:00 PM daily in Indian Time (Asia/Kolkata)
+  // Cron schedule for 10:00 PM daily in Indian Time (Asia/Kolkata)
   // Format: 'Minute Hour DayOfMonth Month DayOfWeek'
-  // '0 19 * * *' -> Daily at 19:00 (7:00 PM)
+  // '0 22 * * *' -> Daily at 22:00 (10:00 PM)
   console.log('========================================================');
   console.log('⏳ Starting Lead Finder Scheduler Mode');
-  console.log('📅 Schedule: Daily at 7:00 PM IST (19:00 Asia/Kolkata)');
+  console.log('📅 Schedule: Daily at 10:00 PM IST (22:00 Asia/Kolkata)');
   console.log('========================================================');
 
-  cron.schedule('0 19 * * *', () => {
+  cron.schedule('0 22 * * *', () => {
     executeLeadGeneration();
   }, {
     scheduled: true,
